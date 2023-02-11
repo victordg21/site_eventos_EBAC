@@ -1,0 +1,66 @@
+@use 'variables';
+
+.infos-bar{
+
+    padding: 16px 24px;
+    background-color: variables.$textColor;
+    display: flex;
+    justify-content: space-between;
+
+    .button{
+        padding: 12px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+        white-space: nowrap;
+
+        &--primary{
+            color: variables.$textColor;
+            background-color: variables.$buttonColor;
+        }
+    }
+
+    &__infos{
+
+        display: flex;
+        gap: 40px;
+
+        &__item{
+            color: variables.$secondaryTextColor;
+            font-size: 14px;
+
+            b{
+                color: variables.$secondaryTextColor;
+                font-size: 18px;
+                display: block;
+            }
+        }
+    }
+
+    @media (max-width:640px) {
+        display: block;
+
+        .button{
+            display: block;
+            width: 100%;
+        }
+
+        &__infos{
+            display: block;
+
+            &__item{
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    @media (min-width:641) and (max-width:1023px) {
+        display: flex;
+        align-items: center;
+
+        &__infos{
+            gap: 16px;
+        }
+    }
+}

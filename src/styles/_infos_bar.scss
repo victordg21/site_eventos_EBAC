@@ -60,6 +60,8 @@
     @media (min-width:641) and (max-width:1023px) {
         display: flex;
         align-items: center;
+        padding: 16px 16px;
+        margin: 8px 12px;
 
         &__infos{
             gap: 16px;
